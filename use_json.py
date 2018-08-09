@@ -36,6 +36,7 @@ def json_to_python_from_file():
     """从文件读取内容,并转化成python对象"""
     f = open('./static/book.json', 'r', encoding='utf-8')
     s = f.read()
+    f.close()
     rest = json.loads(s)
     print(rest['name'])
 
